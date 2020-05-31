@@ -6,7 +6,7 @@
 [ext_resource path="res://Fonts/candles_.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://GUI/GUI.gd" type="Script" id=5]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=1]
 size = 48
 outline_size = 4
 outline_color = Color( 0, 0, 0, 1 )
@@ -52,7 +52,7 @@ margin_top = 4.0
 margin_right = 60.0
 margin_bottom = 66.0
 size_flags_horizontal = 3
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 text = "0"
 align = 2
 
@@ -71,7 +71,7 @@ margin_top = 4.0
 margin_right = 188.0
 margin_bottom = 66.0
 size_flags_horizontal = 3
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 text = "0"
 align = 2
 

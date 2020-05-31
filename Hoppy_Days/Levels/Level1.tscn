@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Levels/Tileset.tres" type="TileSet" id=2]
@@ -7,13 +7,17 @@
 [ext_resource path="res://Items/JumpPad.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Levels/GameState.gd" type="Script" id=6]
 [ext_resource path="res://GUI/GUI.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Items/Coin.tscn" type="PackedScene" id=8]
+[ext_resource path="res://NPCs/Spikeman.tscn" type="PackedScene" id=9]
+[ext_resource path="res://NPCs/Cloud.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Items/Portal.tscn" type="PackedScene" id=11]
 
 [node name="Level1" type="Node2D"]
 position = Vector2( 3.896, 19.4802 )
 script = ExtResource( 6 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 677.419, 512.338 )
+position = Vector2( 307.564, -604.096 )
 collision_mask = 6
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -43,6 +47,47 @@ position = Vector2( 2379.41, -80.3181 )
 [node name="SpikeTop6" parent="Hazards" instance=ExtResource( 3 )]
 position = Vector2( 199.228, 391.403 )
 
+[node name="Coins" type="Node" parent="."]
+
+[node name="Coin" parent="Coins" instance=ExtResource( 8 )]
+position = Vector2( 344.46, 847.172 )
+
+[node name="Coin2" parent="Coins" instance=ExtResource( 8 )]
+position = Vector2( 246.728, 847.172 )
+
+[node name="Coin3" parent="Coins" instance=ExtResource( 8 )]
+position = Vector2( 874, 674.406 )
+
+[node name="Coin4" parent="Coins" instance=ExtResource( 8 )]
+position = Vector2( 795.036, 674.402 )
+
+[node name="Coin5" parent="Coins" instance=ExtResource( 8 )]
+position = Vector2( 703.954, 674.406 )
+
+[node name="Coin6" parent="Coins" instance=ExtResource( 8 )]
+position = Vector2( 1216.35, 478.818 )
+
+[node name="Coin7" parent="Coins" instance=ExtResource( 8 )]
+position = Vector2( 1141.35, 478.818 )
+
+[node name="Coin8" parent="Coins" instance=ExtResource( 8 )]
+position = Vector2( 1141.35, 478.818 )
+
+[node name="Coin9" parent="Coins" instance=ExtResource( 8 )]
+position = Vector2( 1068.91, 478.818 )
+
+[node name="Coin10" parent="Coins" instance=ExtResource( 8 )]
+position = Vector2( 74.9386, 1639.5 )
+scale = Vector2( 1.0085, 0.879613 )
+
+[node name="Coin11" parent="Coins" instance=ExtResource( 8 )]
+position = Vector2( 273.719, 1723.12 )
+scale = Vector2( 1.0085, 0.879613 )
+
+[node name="Coin12" parent="Coins" instance=ExtResource( 8 )]
+position = Vector2( 473.585, 1784.19 )
+scale = Vector2( 1.0085, 0.879613 )
+
 [node name="JumpPads" type="Node" parent="."]
 
 [node name="JumpPad" parent="JumpPads" instance=ExtResource( 5 )]
@@ -60,3 +105,14 @@ volume_db = -5.0
 autoplay = true
 
 [node name="GUI" parent="." instance=ExtResource( 7 )]
+
+[node name="NPCs" type="Node" parent="."]
+
+[node name="Spikeman" parent="NPCs" instance=ExtResource( 9 )]
+position = Vector2( 832, 1784.19 )
+
+[node name="Cloud" parent="NPCs" instance=ExtResource( 10 )]
+position = Vector2( 1383.75, 1185.51 )
+
+[node name="Portal" parent="." instance=ExtResource( 11 )]
+position = Vector2( 6522.17, 1675.14 )
