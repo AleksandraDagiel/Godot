@@ -6,8 +6,6 @@ func _physics_process(delta):
 	update_movement()
 	move_and_slide(motion)
 	
-
-
 func update_movement():
 	look_at(get_global_mouse_position())
 	if Input.is_action_pressed("move_down") and not Input.is_action_pressed("move_up"):
@@ -24,13 +22,9 @@ func update_movement():
 	else:
 		motion.x = lerp(motion.x, 0, FRICTION)	
 		
-		
-		
-
-
-
-
-
+func _input(event):
+	if Input.is_action_just_pressed("switch_torch"):
+		$Torch.enabled = !$Torch.enabled
 
 
 
